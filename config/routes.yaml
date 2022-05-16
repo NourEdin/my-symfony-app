@@ -1,3 +1,6 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\WebController::index
+sign_up:
+    path: /signup
+    controller: App\Controller\WebController::signUp
