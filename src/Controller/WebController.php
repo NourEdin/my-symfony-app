@@ -1,13 +1,18 @@
 <?php
 namespace App\Controller;
 
+use App\Services\PagesManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class WebController extends AbstractController {
-    public function index(): Response
+    public function index(PagesManager $pm): Response
     {
-        return new Response("Homepage");
+        $resp = $pm->view("home");
+        if (!$resp)
+            $this->createNotFoundException("Page not found");
+
+        return new Response($resp);
     }
 
     public function signUp(): Response 
