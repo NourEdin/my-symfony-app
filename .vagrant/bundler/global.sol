@@ -1,0 +1,1 @@
+{"dependencies":[["vagrant-faster",["= 0.2.0"]],["vagrant-winnfsd",["= 1.4.0"]]],"checksum":"f774a5a0aad159bb9c672144ffc7270e637abc77b1acb07f481eeae3558e0ee0","vagrant_version":"2.2.18"}
